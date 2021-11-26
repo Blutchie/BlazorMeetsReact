@@ -17,8 +17,9 @@ A pre-build script will register the component to the JS window object and add a
 - Add custom style to components
 
 ## Wish list
-- Generic way of communicating with between Blazor and React
+- Generic way of communicating between Blazor and React
 - Use of external React UI Component libraries
+- let _update.js actually parse js components instead of using naming convenstion to determine the existing components
 
 ## Requirements
 - Visual Studio (project created with 2022)
