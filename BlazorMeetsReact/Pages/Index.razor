@@ -1,0 +1,22 @@
+﻿@page "/"
+
+<h1>Hello Blazor, meet React!</h1>
+
+<p>I've seen a couple of POC's about rendering a react component in Blazor, but all of them just showed how to render 1 single component which required some hardcoding like registering the component to the JS window object.</p>
+<p>As a challenge I wanted to go one step further, meaning that I wanted to make it easier to just add new React components in a folder without altering them for Blazor. </p>
+<p>A pre-build script will register the component to the JS window object and add an enum value so you can pick React components kind of strongly typed by enums.</p>
+
+<h2>Currently implemented</h2>
+<ul>
+    <li>Auto generate React index file</li>
+    <li>Auto generate ReactComponent enum</li>
+    <li>Render simple components</li>
+    <li>Render simple components that have nested other components</li>
+    <li>Render compenents with props</li>
+    <li>Add custom style to components</li>
+</ul>
+<h2>Wish list</h2>
+<ul>
+    <li>Generic way of communicating with between Blazor and React</li>
+    <li>Use of external React UI Component libraries</li>
+</ul>

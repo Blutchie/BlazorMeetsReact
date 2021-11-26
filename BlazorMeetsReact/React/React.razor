@@ -1,0 +1,22 @@
+﻿@inject IJSRuntime JS;
+
+<div @ref="_reactElement" style="@Style"></div>
+
+@code {
+    private ElementReference _reactElement;
+
+    [Parameter]
+    public ReactComponent? Component {  get;  set; }
+
+    [Parameter]
+    public object? Props { get; set; }
+
+    [Parameter]
+    public string? Style { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender) await JS.InvokeVoidAsync("renderReact", Component.ToString(), Props, _reactElement);
+    }
+
+}

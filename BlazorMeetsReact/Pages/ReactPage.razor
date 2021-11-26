@@ -1,0 +1,18 @@
+﻿@page "/react"
+
+<h1>Testing React components :) </h1>
+
+<React Component="ReactComponent.SimpleComponent" />
+
+<React Component="ReactComponent.Divider" />
+
+<React Component="ReactComponent.NestedComponent" Style="border: 1px solid gray; padding: 5px;"/>
+
+<React Component="ReactComponent.Divider" />
+
+<React Component="ReactComponent.Greeting" Props="greeting"/>
+
+@code
+{
+    object greeting = new { greeting1 = "Hello", greeting2 = "props" };
+}
