@@ -1,6 +1,6 @@
 ﻿@inject IJSRuntime JS;
 
-<div @ref="_reactElement" style="@Style"></div>
+<div @ref="_reactElement" @attributes=AllOtherAttributes></div>
 
 @code {
     private ElementReference _reactElement;
@@ -11,8 +11,8 @@
     [Parameter]
     public object? Props { get; set; }
 
-    [Parameter]
-    public string? Style { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object>? AllOtherAttributes { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
